@@ -5,6 +5,7 @@ def twoSum(nums, target):
     :type target: int
     :rtype: List[int]
     """
+    # 强制遍历list，然后相加获取值，弊端：list很长的时候，性能低，会超时
     # for i in xrange(len(nums)):
     #     for x in xrange(len(nums)):
     #         if i == x:
@@ -12,6 +13,9 @@ def twoSum(nums, target):
     #         if nums[i] + nums[x] == target:
     #             return i,x
 
+    # dict方法解决，如果list中有重复的，需要单独处理
+    # 如果没有重复元素的时候，返回的是list[int]
+    # 如果有重复的元素，返回的是list
     dictMap = {}
     for index, value in enumerate(nums):
         if target - value in dictMap.keys():
