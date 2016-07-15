@@ -1,4 +1,4 @@
-
+# coding=utf-8
 def twoSum(nums, target):
     """
     :type nums: List[int]
